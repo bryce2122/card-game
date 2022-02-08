@@ -66,4 +66,5 @@ class Game
     else value.to_i
     end
   end
+
 end
