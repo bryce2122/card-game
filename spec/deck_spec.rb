@@ -1,7 +1,6 @@
 require 'rspec'
 require_relative  '../lib/deck'
 
-
 describe Deck do
 
   it "has an array of ranks" do

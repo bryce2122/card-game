@@ -16,8 +16,4 @@ describe Player do
     expect(subject.score).to eq 0
   end
 
-  it 'stringifies rank and suit correctly' do
-    expect(subject.score).to eq 0
-  end
-
 end

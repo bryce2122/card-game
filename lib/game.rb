@@ -1,9 +1,7 @@
 class Game
 
-  attr_reader :deck, :players
-  attr_accessor :round
+  attr_reader :deck, :players, :round
 
-  #Initializing the game with players and deck of cards
   def initialize(deck, players)
     @deck = deck
     @players = players
@@ -24,6 +22,7 @@ class Game
     return_cards
   end
 
+  # Calculate each player's total score after a round
   def calculate_game_scores
     calculate_score
     players.each do |player|
@@ -31,7 +30,6 @@ class Game
     end
   end
 
-  #Dealing cards, can take any number as argumet for the number of cards dealt
   def deal_cards(cards)
     @layers.each do |player|
       player.hand = []
@@ -44,8 +42,6 @@ class Game
     players.each { |player| deck.return(player.return_cards) }
   end
 
-
-  # calculate each player's total score after a round
   def calculate_score
     players.each do |player|
       player.hand.each do |rank, suit|
@@ -53,7 +49,6 @@ class Game
       end
     end
   end
-
 
   def winner
     players.max_by do |player|
