@@ -1,4 +1,4 @@
-Ruby Card Game
+Card Game
 ========
 
 A card game played between 5 players. Immediately after the cards are dealt, the player with the highest hand wins.
