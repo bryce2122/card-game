@@ -31,7 +31,7 @@ class Game
   end
 
   def deal_cards(cards)
-    @layers.each do |player|
+    @players.each do |player|
       player.hand = []
       player.score = 0
       player.hand += deck.cards.pop(cards)
