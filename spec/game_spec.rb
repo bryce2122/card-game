@@ -27,7 +27,6 @@ describe Game do
       expect(subject.convert_value("King")).to eq 13
     end
 
-
     it "checks the rank of the card and returns the numeric value" do
       expect(subject.convert_value("3")).to eq 3
     end
