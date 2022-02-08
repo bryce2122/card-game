@@ -1,7 +1,7 @@
 Card Game
 ========
 
-A card game played between 5 players. Immediately after the cards are dealt, the player with the highest hand wins.
+A card game played between 5 players. After the cards are dealt, the player with the highest hand wins.
 
 To run the app simply change into the directory and run:
 ```shell
@@ -23,7 +23,7 @@ How to use:
 ----
 Change into the directory:
 ```shell
-$ cd ruby-card-game
+$ cd card-game
 ```
 
 Install gems:
