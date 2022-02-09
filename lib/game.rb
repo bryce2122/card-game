@@ -18,7 +18,11 @@ class Game
 
   def end_round
     calculate_game_scores
-    puts "And the winner of round #{round} is: #{winner.name}"
+    if winners.length > 1
+      puts "And the winners of round #{round} are: #{winners.join(",")}"
+    else
+      puts "And the winner of round #{round} is: #{winners.join(" ")}"
+    end
     return_cards
   end
 
@@ -50,10 +54,10 @@ class Game
     end
   end
 
-  def winner
-    players.max_by do |player|
-      player.score
-    end
+  #Find the players with the highest score at the end of a round
+  def winners
+    winner_array = players.group_by {|player| player.score}.max[1]
+    winner_array.map {|player| player.name}
   end
 
   #Convert cards' rank to numeric values
