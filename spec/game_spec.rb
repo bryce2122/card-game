@@ -6,11 +6,13 @@ require_relative '../lib/player'
 describe Game do
 
   let(:deck) { Deck.new }
+
   let(:player_1) { Player.new("Tom") }
   let(:player_2) { Player.new("Harry") }
   let(:player_3) { Player.new("Ron") }
   let(:player_4) { Player.new("Sirius") }
   let(:player_5) { Player.new("Ginny") }
+
   subject {Game.new(deck, [player_1, player_2,player_3,player_4,player_5]) }
 
   describe 'Starting the game' do
@@ -47,7 +49,7 @@ describe Game do
     end
 
     it "returns the winner of the game" do
-      expect(subject.winner.name).to eq "Tom"
+      expect(subject.winners.join("")).to eq "Tom"
     end
 
   end
