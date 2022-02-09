@@ -2,10 +2,10 @@ require 'player'
 
 describe Player do
 
-  subject{ described_class.new("Alex") }
+  subject{Player.new("Hegel") }
 
   it "has a name" do
-    expect(subject.name).to eq 'Alex'
+    expect(subject.name).to eq 'Hegel'
   end
 
   it 'does not initially have a hand' do
